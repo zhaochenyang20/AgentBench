@@ -21,3 +21,12 @@ text-davinci-002:
         body:
             model: "text-davinci-002"
             max_tokens: 512
+
+
+8bins:
+    import: "./open-chat-llama.yaml"
+    parameters:
+        name: "8bins"
+        body:
+            model: "8bins"
+            max_tokens: 512

@@ -1,0 +1,19 @@
+module: src.client.agents.HTTPAgent
+parameters:
+  url: http://localhost:8104/v1/chat/completions
+  # Change port
+  headers:
+    Content-Type: application/json
+    Authorization: Bearer sk-1dwqsdv4r3wef3rvefg34ef1dwRv
+    # Change token
+  body:
+    temperature: 0
+    skip_special_tokens: False
+    stop_token_ids: [128009, 128001] 
+
+  prompter:
+    name: role_content_dict
+    args:
+      agent_role: assistant
+    
+  return_format: "{response[choices][0][message][content]}"
